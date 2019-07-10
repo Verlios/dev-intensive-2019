@@ -107,16 +107,16 @@ object Utils {
 
         if (firstName != null && lastName!=null && lastName!="") {
 
-            return "${firstName.get(0)}${lastName.get(0)}"
+            return "${firstName.get(0).toUpperCase()}${lastName.get(0).toUpperCase()}"
         }
         else
             if (firstName != null && firstName!=" " && firstName!="") {
-                return "${firstName.get(0)}"
+                return "${firstName.get(0).toUpperCase()}"
             }
             else
 
                 if (lastName != null && lastName!=" " && lastName!="") {
-                    return "${lastName.get(0)}"
+                    return "${lastName.get(0).toUpperCase()}"
                 }
                 else
 
