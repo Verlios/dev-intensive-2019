@@ -105,7 +105,7 @@ object Utils {
 
     fun toInitials(firstName: String?, lastName: String?): String? {
 
-        if (firstName != null && lastName!=null && lastName!="") {
+        if (firstName != null && firstName!="" && lastName!=null  && lastName!="") {
 
             return "${firstName.get(0).toUpperCase()}${lastName.get(0).toUpperCase()}"
         }

@@ -72,7 +72,7 @@ fun Date.humanizeDiff(date:Date = Date()):String{
                                                 if ((timeHour > 1 && timeHour < 5) or
                                                     (timeHour > 21 && timeHour < 24)
                                                 ) {
-                                                    return " $timeHour часа назад"
+                                                    return "$timeHour часа назад"
                                                 } else
                                                     if (timeHour > 4 && timeHour < 21) {
                                                         return " $timeHour часов назад"
