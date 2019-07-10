@@ -4,11 +4,20 @@ import android.R
 
 object Utils {
     fun parseFullName(fullName:String?): Pair<String?,String?>{
-        val parts:List<String>?=fullName?.split(" ")
+        if ((fullName == null) or (fullName == "")or (fullName == " ")){
+            println("123")
+            return Pair(null,null)
+        }
+        else {
+            val parts: List<String>? = fullName?.split(" ")
+            val firstName = parts?.getOrNull(0)
+            val lastName = parts?.getOrNull(1)
+            if ((lastName == null) or (lastName == "")or (lastName == " ")){
+            return  Pair(firstName, null)}
+            else
+                return Pair(firstName, lastName)
+        }
 
-        val firstName = parts?.getOrNull( 0)
-        val lastName =parts?.getOrNull(1)
-        return  firstName to lastName
 
     }
 
